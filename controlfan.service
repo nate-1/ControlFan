@@ -1,0 +1,12 @@
+[Unit]
+Description=A fan control program
+Documentation=https://github.com/Spotifyd/spotifyd
+After=syslog.target
+
+[Service]
+ExecStart=dotnet run --project /home/nate/prog/C#/PROD/FanControl
+Restart=always
+RestartSec=12
+
+[Install]
+WantedBy=default.target
