@@ -4,7 +4,7 @@ Documentation=https://github.com/Spotifyd/spotifyd
 After=syslog.target
 
 [Service]
-ExecStart=dotnet run --project /home/nate/prog/C#/PROD/FanControl
+ExecStart=dotnet run --no-build --project /home/nate/prog/C#/PROD/ControlFan
 Restart=always
 RestartSec=12
 
