@@ -10,7 +10,7 @@ class Program
     static readonly int MIN_CPU_TEMP = 45000;
     static readonly int MAX_CPU_TEMP = 67000;
     static readonly int CRITCAL_TEMP = 80000;
-    static readonly int INTEVAL = 10000;
+    static readonly int INTEVAL = 15000;
 
     static string currentCPUFanState = "";
     static string currentMotherBoardFanState = "";
@@ -27,8 +27,6 @@ class Program
 
     private static void ControlFan(int temp)
     {
-        Console.WriteLine(temp);
-        Console.WriteLine(currentMotherBoardFanState + " " + currentCPUFanState);
         if (temp >= CRITCAL_TEMP)
         {
             if(currentMotherBoardFanState != "2" || currentCPUFanState != "2")
